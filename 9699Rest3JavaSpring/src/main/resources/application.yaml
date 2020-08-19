@@ -1,0 +1,20 @@
+server:
+  port: 0
+spring:
+  application:
+    name: rest3
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        health-check-path: /isAlive
+        health-check-interval: 2s
+        instance-id: ${spring.application.name}:${random.value}
+
+
+
+
+
+
+
